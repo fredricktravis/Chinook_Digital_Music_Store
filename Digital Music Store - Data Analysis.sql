@@ -68,7 +68,8 @@ GROUP BY tracks.trackid
 ORDER BY TotalMoney DESC;
 
 /* 8. Now we know what music track made the most sales and in which country, we would like to know the name of the artist so as to 
-invite them for a concert. In this case, the artist's name is Lost. */
+invite them for a concert.
+In this case, the artist's name is Lost. */
 SELECT trackid, albums.artistid, tracks.name AS TrackName, title AS AlbumTitle, artists.name AS ArtistName
 FROM tracks
 JOIN albums
@@ -148,7 +149,8 @@ WHERE invoice_items.unitprice > (SELECT AVG(invoice_items.unitprice) AS avg_unit
                    				 FROM invoice_items)
 ORDER by tracks.name;
 
-/* 14. Who is the longest serving employee? We need to honour them for their long standing service. */
+/* 14. Who is the longest serving employee? We need to honour them for their long standing service.
+The employee's name is Jane Peacock.*/
 SELECT employeeid, lastname, firstname, title, hiredate, phone, email
 from employees
 ORDER by hiredate ASC;
